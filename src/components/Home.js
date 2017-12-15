@@ -11,7 +11,7 @@ export default class Home extends Component {
 
         this.state = {
             anuncios: []
-        }
+        };
 
         base.bindToState('anuncios', {
             context: this,
@@ -47,7 +47,7 @@ export default class Home extends Component {
                     <div className="row">
                         {this.props.categorias.map( (cat, indice) => {
                             return [
-                                <LinkCategoria key={indice} categoria={{icone: cat.icon, nomeCategoria: cat.categoria}}/>,
+                                <LinkCategoria key={indice} categoria={{icone: cat.icon, nomeCategoria: cat.categoria, url: cat.url}}/>,
                                 ++index%4 === 0 && <div key={'c'+indice} className="w-100"></div>
                             ]
                         })}
