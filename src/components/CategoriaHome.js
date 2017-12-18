@@ -13,11 +13,14 @@ export default class CategoriaHome extends Component {
         base.bindToState('anuncios', {
             context: this,
             state: 'anuncios',
+            queries: {
+                orderByChild: 'categoria',
+                equalTo: props.match.params.categoriaUrl,
+            }
         });
     }
 
     render(){
-        console.log(this.state.anuncios);
         return(
             <div>
                 {

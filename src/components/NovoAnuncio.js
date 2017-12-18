@@ -62,7 +62,7 @@ export default class NovoAnuncio extends Component {
                             <label htmlFor="categoria">Categoria</label>
                             <select ref={((ref) => this.categoria = ref)} className='form-control' placeholder="Nome" id="nome">
                                 {
-                                    this.props.categorias.map( (categoria, indice) => <option  key={categoria.url}>{categoria.categoria}</option>)
+                                    this.props.categorias.map( (categoria, indice) => <option value={categoria.url} key={categoria.url}>{categoria.categoria}</option>)
                                 }
                             </select>
                         </div>
