@@ -1,8 +1,6 @@
 import React from 'react';
 
-
-const AnuncioHome = ({anuncio}) => {
-
+const Anuncio = ({anuncio}) => {
     return (
         <div className="col-lg-4 col-md-6 mb-4">
             <div className="card h-100">
@@ -19,4 +17,4 @@ const AnuncioHome = ({anuncio}) => {
     );
 }
 
-export default AnuncioHome;
+export default Anuncio;

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import AnuncioHome from './AnuncioHome';
+import Anuncio from './Anuncio';
 import LinkCategoria from './LinkCategoria';
 import HeaderHome from './HeaderHome';
 import base from '../base';
@@ -26,14 +26,14 @@ export default class Home extends Component {
         return(
             <div>
                 <HeaderHome/>
-                <div className="container">
+                <div className="container" style={{paddingTop: '120px'}}>
                     <h3>Últimos Anúncios</h3>
                     <div className="row">
                         {
 
                             Object.keys(this.state.anuncios).map( key => {
                                 const anuncio = this.state.anuncios[key];
-                                return <AnuncioHome key={key} anuncio={{
+                                return <Anuncio key={key} anuncio={{
                                     nome: anuncio.nome,
                                     descricao: anuncio.descricao,
                                     preco: anuncio.preco,
