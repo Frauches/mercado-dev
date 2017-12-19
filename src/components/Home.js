@@ -12,7 +12,9 @@ export default class Home extends Component {
         this.state = {
             anuncios: []
         };
+    }
 
+    componentWillMount(){
         base.bindToState('anuncios', {
             context: this,
             state: 'anuncios',
@@ -35,6 +37,7 @@ export default class Home extends Component {
                                 const anuncio = this.state.anuncios[key];
                                 return <Anuncio key={key} anuncio={{
                                     nome: anuncio.nome,
+                                    foto: anuncio.foto,
                                     descricao: anuncio.descricao,
                                     preco: anuncio.preco,
                                     imagem: anuncio.foto
